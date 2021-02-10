@@ -59,6 +59,7 @@ export class SPTermStoreService {
   * Gets the collection of term stores in the current SharePoint env
   */
     public async getTermsFromTermSetAsync(termSetName: string, termSetLocal: Number): Promise<ISPTermObject[]> {
+        debugger;
         if (Environment.type === EnvironmentType.SharePoint ||
             Environment.type === EnvironmentType.ClassicSharePoint) {
 

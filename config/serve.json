@@ -4,23 +4,23 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "pageUrl": "https://spo365devfactory.sharepoint.com/sites/Deskbooking/SitePages/Home.aspx",
       "customActions": {
         "228c5d4d-ebe6-47f2-a835-80995fd995a2": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
-            "testMessage": "Test message"
+            "TopMenuTermSet":"TenantGlobalNavBar"
           }
         }
       }
     },
     "globalNavigation": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "pageUrl": "https://spo365devfactory.sharepoint.com/sites/Deskbooking/SitePages/Home.aspx",
       "customActions": {
         "228c5d4d-ebe6-47f2-a835-80995fd995a2": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
-            "testMessage": "Test message"
+            "TopMenuTermSet":"TenantGlobalNavBar"
           }
         }
       }
