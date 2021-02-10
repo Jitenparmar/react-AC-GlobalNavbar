@@ -4,6 +4,6 @@
         Title="GlobalNavigation"
         Location="ClientSideExtension.ApplicationCustomizer"
         ClientSideComponentId="228c5d4d-ebe6-47f2-a835-80995fd995a2"
-        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+        ClientSideComponentProperties="{&quot;TopMenuTermSet&quot;:&quot;TenantGlobalNavBar&quot;}">
     </CustomAction>
 </Elements>

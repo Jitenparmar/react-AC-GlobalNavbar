@@ -47,12 +47,12 @@ export default class GlobalNavigationApplicationCustomizer
   @override
   public async onInit(): Promise<void> {
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
-    console.log("TopMenuTermsetName :"+this.properties.TopMenuTermSet);
+    console.log("TopMenuTermsetName :" + this.properties.TopMenuTermSet);
     // Configure caching
     pnp.setup({
       defaultCachingStore: "session",
       defaultCachingTimeoutSeconds: 900, //15min
-      globalCacheDisable: false // true to disable caching in case of debugging/testing
+      globalCacheDisable: true // true to disable caching in case of debugging/testing
     });
 
     // Retrieve the menu items from taxonomy
@@ -61,13 +61,13 @@ export default class GlobalNavigationApplicationCustomizer
       siteAbsoluteUrl: this.context.pageContext.web.absoluteUrl,
     });
 
-    if (this.properties.TopMenuTermSet == undefined || this.properties.TopMenuTermSet ==null) {
+    if (this.properties.TopMenuTermSet != null) {
       let cachedTerms = pnp.storage.session.get(NAV_TERMS_KEY);
       if (cachedTerms != null) {
         this._topMenuItems = cachedTerms;
       }
       else {
-        this._topMenuItems = await termStoreService.getTermsFromTermSetAsync("TenantGlobalNavBar", this.context.pageContext.web.language);
+        this._topMenuItems = await termStoreService.getTermsFromTermSetAsync(this.properties.TopMenuTermSet, this.context.pageContext.web.language);
         pnp.storage.session.put(NAV_TERMS_KEY, this._topMenuItems);
       }
     }

@@ -16,8 +16,6 @@ export default class TenantGlobalNavBar extends React.Component<ITenantGlobalNav
  * Main constructor for the component
  */
   constructor(props: ITenantGlobalNavbarProps) {
-      debugger;
-      console.log('Step3');
     super(props);
     this.state = {
     };
